@@ -1,10 +1,12 @@
 var express = require('express');
 var socket = require('socket.io');
+require('dotenv').config();
+let PORT = process.env.PORT
 
 // App setup
 var app = express();
-var server = app.listen(4000, function () {
-  console.log('listening for requests on port 4000,');
+var server = app.listen(PORT, function () {
+  console.log(`listening for requests on port ${PORT}`);
 });
 
 // Static files
