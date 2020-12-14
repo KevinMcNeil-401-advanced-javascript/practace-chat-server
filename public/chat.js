@@ -1,8 +1,6 @@
-require('dotenv').config();
-let PORT = process.env.PORT
 
 // Make connection
-var socket = io.connect(PORT);
+var socket = io();
 
 // Query DOM
 var message = document.getElementById('message'),
