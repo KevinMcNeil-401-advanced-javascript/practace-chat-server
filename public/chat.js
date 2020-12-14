@@ -1,5 +1,8 @@
+require('dotenv').config();
+let PORT = process.env.PORT
+
 // Make connection
-var socket = io.connect('http://localhost:4000');
+var socket = io.connect(PORT);
 
 // Query DOM
 var message = document.getElementById('message'),
